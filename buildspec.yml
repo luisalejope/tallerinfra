@@ -5,15 +5,9 @@ phases:
     commands:
     - echo "Pre Build phase"
     - yum update -y
-    - yum install curl
-    - curl -sL https://rpm.nodesource.com/setup_6.x
-    - yum install nodejs
-    - node -v 
-    - npm -g install acorn
   build:
     commands:
     - echo "Build phase"
-    - acorn --silent html/typing.js;
 
   post_build:
     commands:
